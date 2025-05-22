@@ -14,6 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <body>
+  <section class="contain">
   <header class="navbar">
   <div class="nav-left">
     <img src="logo.png" alt="Logo" class="logo" />
@@ -32,7 +33,9 @@
   <img src="bell-icon.svg" alt="Notifications" class="nav-icon">
 </div>
 </header>
+</section>
 
+<section class="contain">
 <section class="hero-sub-container">
   <h1>The Best Streaming Experience</h1>
   <p>
@@ -42,17 +45,39 @@
   </p>
   <button>Start Watching Now</button>
 </section>                                                                                                                                                                                              
+</section>
 
- <section class="categories-section">
-  <div class="categories-header">
-    <div class="text-content">
-      <h2>Explore our wide variety of categories</h2>
-      <p>Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new</p>
-    </div>
+<section class="contain">
+<div class="header-section">
+  <div class="text-content">
+    <h2>Explore our wide variety of categories</h2>
+    <p>
+      Whether you're looking for a comedy to make you laugh, a drama to make you think, 
+      or a documentary to learn something new
+    </p>
   </div>
 
+  <div class="nav-container">
+    <button class="nav-button">
+      <span class="arrow">&#8592;</span>
+    </button>
+
+    <div class="progress-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <button class="nav-button">
+      <span class="arrow">&#8594;</span>
+    </button>
+  </div>
+</div>
+
+
+
 <div class="carousel-wrapper">
-  <button class="arrow-btn swiper-button-prev">&#8592;</button>
 
   <div class="swiper categories-carousel">
     <div class="swiper-wrapper">
@@ -97,12 +122,11 @@
     <div class="swiper-pagination"></div>
   </div>
 
-  <button class="arrow-btn swiper-button-next">&#8594;</button>
 </div>
+</section>
+</section>
 
-
-
-
+<section class="conatin">
  <section class="devices-section">
   <div class="section-header">
     <h2>We Provide you streaming experience across various devices.</h2>
@@ -142,144 +166,92 @@
     </div>
   </div>
 </section>
+</section>
 
-<section class="faq-section">
+<div class="faq-section">
   <div class="faq-header">
-    <div class="faq-title-group">
+    <div>
       <h2>Frequently Asked Questions</h2>
       <p>Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe.</p>
     </div>
-    <button class="ask-question-btn">Ask a Question</button>
+    <button class="ask-button">Ask a Question</button>
   </div>
 
   <div class="faq-grid">
-    <div class="faq-item active">
-      <div class="faq-question">
-        <span class="faq-number">01</span>
-        <div class="faq-text">
-          <h3>What is StreamVibe?</h3>
-          <p class="faq-answer">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
+    <div class="faq-column">
+      <div class="faq-item expanded">
+        <div class="faq-icon">01</div>
+        <div class="faq-content">
+          <h4>What is StreamVibe?</h4>
+          <p>StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
         </div>
-        <span class="faq-toggle">−</span>
+        <div class="faq-toggle">−</div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-number">02</span>
-        <div class="faq-text">
-          <h3>How much does StreamVibe cost?</h3>
+      <div class="faq-item">
+        <div class="faq-icon">02</div>
+        <div class="faq-content">
+          <h4>How much does StreamVibe cost?</h4>
         </div>
-        <span class="faq-toggle">+</span>
+        <div class="faq-toggle">+</div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-number">03</span>
-        <div class="faq-text">
-          <h3>What content is available on StreamVibe?</h3>
+      <div class="faq-item">
+        <div class="faq-icon">03</div>
+        <div class="faq-content">
+          <h4>What content is available on StreamVibe?</h4>
         </div>
-        <span class="faq-toggle">+</span>
+        <div class="faq-toggle">+</div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-number">04</span>
-        <div class="faq-text">
-          <h3>How can I watch StreamVibe?</h3>
+      <div class="faq-item">
+        <div class="faq-icon">04</div>
+        <div class="faq-content">
+          <h4>How can I watch StreamVibe?</h4>
         </div>
-        <span class="faq-toggle">+</span>
+        <div class="faq-toggle">+</div>
       </div>
     </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-number">05</span>
-        <div class="faq-text">
-          <h3>How do I sign up for StreamVibe?</h3>
+    <!-- Right Column -->
+    <div class="faq-column">
+      <div class="faq-item">
+        <div class="faq-icon">05</div>
+        <div class="faq-content">
+          <h4>How do I sign up for StreamVibe?</h4>
         </div>
-        <span class="faq-toggle">+</span>
+        <div class="faq-toggle">+</div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-number">06</span>
-        <div class="faq-text">
-          <h3>What is the StreamVibe free trial?</h3>
+      <div class="faq-item">
+        <div class="faq-icon">06</div>
+        <div class="faq-content">
+          <h4>What is the StreamVibe free trial?</h4>
         </div>
-        <span class="faq-toggle">+</span>
+        <div class="faq-toggle">+</div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-number">07</span>
-        <div class="faq-text">
-          <h3>How do I contact StreamVibe customer support?</h3>
+      <div class="faq-item">
+        <div class="faq-icon">07</div>
+        <div class="faq-content">
+          <h4>How do I contact StreamVibe customer support?</h4>
         </div>
-        <span class="faq-toggle">+</span>
+        <div class="faq-toggle">+</div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span class="faq-number">08</span>
-        <div class="faq-text">
-          <h3>What are the StreamVibe payment methods?</h3>
+      <div class="faq-item">
+        <div class="faq-icon">08</div>
+        <div class="faq-content">
+          <h4>What are the StreamVibe payment methods?</h4>
         </div>
-        <span class="faq-toggle">+</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
- <section class="plans">
-  <h2>Choose the plan that's right for you</h2>
-  <h6><span>Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!</span></h6>
-
-  <div class="plan-toggle">
-    <button class="active">Monthly</button>
-    <button>Yearly</button>
-  </div>
-
-  <div class="plan-container">
-    <div class="plan-card">
-      <h3>Basic Plan</h3>
-      <p class="plan-desc">Enjoy an extensive library of movies and shows, including newly released titles.</p>
-      <div class="plan-price">$9.99 <span>/month</span></div>
-      <div class="plan-actions">
-        <button class="trial-btn">Start Free Trial</button>
-        <button class="choose-btn">Choose Plan</button>
-      </div>
-    </div>
-
-    <div class="plan-card">
-      <h3>Standard Plan</h3>
-      <p class="plan-desc">Access to a wider selection of content, including exclusive releases.</p>
-      <div class="plan-price">$12.99 <span>/month</span></div>
-      <div class="plan-actions">
-        <button class="trial-btn">Start Free Trial</button>
-        <button class="choose-btn">Choose Plan</button>
-      </div>
-    </div>
-
-    <div class="plan-card">
-      <h3>Premium Plan</h3>
-      <p class="plan-desc">Get it all: full access, offline viewing, and top-tier quality.</p>
-      <div class="plan-price">$14.99 <span>/month</span></div>
-      <div class="plan-actions">
-        <button class="trial-btn">Start Free Trial</button>
-        <button class="choose-btn">Choose Plan</button>
+        <div class="faq-toggle">+</div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
+
+<section class="contain">
 <section class="trial-section">
   <div class="trial-text">
     <h2>Start your free trial today!</h2>
@@ -289,6 +261,8 @@
     <button class="cta-button">Start a Free Trial</button>
   </div>
 </section>
+</section>
+
 
   <footer class="footer">
     <p>&copy; 2025 StreamVibe. All Rights Reserved.</p>
@@ -311,8 +285,8 @@
     spaceBetween: 20,
     loop: true,
     autoplay: {
-      delay: 2000, // 3 seconds
-      disableOnInteraction: false, // keeps autoplay running after user interacts
+      delay: 2000,
+      disableOnInteraction: false, 
     },
     navigation: {
       nextEl: '.swiper-button-next',
