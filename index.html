@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StreamVibe Clone</title>
   <link href="styles.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <body>
   <header class="navbar">
@@ -38,35 +43,64 @@
   <button>Start Watching Now</button>
 </section>                                                                                                                                                                                              
 
-  <section class="categories">
-  <h2>Explore our wide variety of categories</h2>
-  <p class="subtitle">
-    Whether you're looking for a comedy to make you laugh, a drama to make you think, 
-    or a documentary to learn something new
-  </p>
-  <div class="category-grid">
-    <div class="category-card">
-      <img src="Action.png" alt="Action">
-      <span>Action</span>
-    </div>
-    <div class="category-card">
-      <img src="Adventure.png" alt="Adventure">
-      <span>Adventure</span>
-    </div>
-    <div class="category-card">
-      <img src="Comedy.png" alt="Comedy">
-      <span>Comedy</span>
-    </div>
-    <div class="category-card">
-      <img src="Drama.png" alt="Drama">
-      <span>Drama</span>
-    </div>
-    <div class="category-card">
-      <img src="Horror.png" alt="Horror">
-      <span>Horror</span>
+ <section class="categories-section">
+  <div class="categories-header">
+    <div class="text-content">
+      <h2>Explore our wide variety of categories</h2>
+      <p>Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new</p>
     </div>
   </div>
-</section>
+
+<div class="carousel-wrapper">
+  <button class="arrow-btn swiper-button-prev">&#8592;</button>
+
+  <div class="swiper categories-carousel">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide category-card">
+        <img src="Action.png" alt="Action">
+        <div class="category-footer">
+          <span>Action</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+      </div>
+      <div class="swiper-slide category-card">
+        <img src="Adventure.png" alt="Adventure">
+        <div class="category-footer">
+          <span>Adventure</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+      </div>
+      <div class="swiper-slide category-card">
+        <img src="Comedy.png" alt="Comedy">
+        <div class="category-footer">
+          <span>Comedy</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+      </div>
+      <div class="swiper-slide category-card">
+        <img src="Drama.png" alt="Drama">
+        <div class="category-footer">
+          <span>Drama</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+      </div>
+      <div class="swiper-slide category-card">
+        <img src="Horror.png" alt="Horror">
+        <div class="category-footer">
+          <span>Horror</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <button class="arrow-btn swiper-button-next">&#8594;</button>
+</div>
+
+
 
 
  <section class="devices-section">
@@ -271,6 +305,37 @@
     });
   });
 </script>
+<script>
+  const swiper = new Swiper('.categories-carousel', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2000, // 3 seconds
+      disableOnInteraction: false, // keeps autoplay running after user interacts
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3
+      },
+      480: {
+        slidesPerView: 2
+      },
+      0: {
+        slidesPerView: 1
+      }
+    }
+  });
+</script>
+
 
 </body>
 
