@@ -390,40 +390,28 @@
 
   faqItems.forEach(item => {
     const toggle = item.querySelector('.faq-toggle');
-    const answer = item.querySelector('.faq-answer');
-    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-content p');
 
-    question.addEventListener('click', () => {
-      const isVisible = answer.style.display === 'block';
-      
-      // Close all
-      faqItems.forEach(i => {
-        i.querySelector('.faq-answer').style.display = 'none';
-        i.querySelector('.faq-toggle').textContent = '+';
-      });
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
 
-      // Toggle current
-      if (!isVisible) {
-        answer.style.display = 'block';
-        toggle.textContent = '–';
+      const isExpanded = item.classList.contains('expanded');
+
+      // Toggle class
+      item.classList.toggle('expanded');
+
+      // Update icon
+      toggle.textContent = isExpanded ? '+' : '−';
+
+      // Toggle answer visibility
+      if (answer) {
+        answer.style.display = isExpanded ? 'none' : 'block';
       }
     });
   });
 </script>
 
-<!-- testing -->
 
-<!-- <script>
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
-      const toggle = item.querySelector('.faq-toggle');
-      toggle.textContent = item.classList.contains('active') ? '−' : '+';
-    });
-  });
-</script> -->
 <script>
   const swiper = new Swiper('.categories-carousel', {
     slidesPerView: 3,

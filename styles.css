@@ -511,6 +511,14 @@ button.choose {
   user-select: none;
 }
 
+.faq-content p {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.faq-item.expanded .faq-content p {
+  display: block;
+}
 
 
 .trial-section {
