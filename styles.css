@@ -265,6 +265,7 @@ header {
   min-width: 180px;
   flex: 0 0 auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  margin-top: 30px;
 }
 
 .category-card img {
@@ -326,6 +327,13 @@ header {
   gap: 20px;
 }
 
+.pricing-card p{
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  color: #aaa;
+} 
+
 .price {
   font-size: 28px;
   font-weight: bold;
@@ -373,6 +381,8 @@ button.choose {
 .devices-section {
   max-width: 1440px;
   margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
   padding: 60px 40px;
 }
 
@@ -388,6 +398,7 @@ button.choose {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
+  margin-top: 40px;
 }
 
 .device-card {
@@ -530,7 +541,7 @@ button.choose {
   color: white;
   border-radius: 8px;
   margin: 2rem auto;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 .trial-text {

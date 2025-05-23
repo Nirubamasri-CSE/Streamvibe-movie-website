@@ -397,13 +397,9 @@
 
       const isExpanded = item.classList.contains('expanded');
 
-      // Toggle class
       item.classList.toggle('expanded');
 
-      // Update icon
       toggle.textContent = isExpanded ? '+' : '−';
-
-      // Toggle answer visibility
       if (answer) {
         answer.style.display = isExpanded ? 'none' : 'block';
       }
