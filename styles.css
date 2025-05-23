@@ -46,7 +46,6 @@ header {
   padding: 20px 0;
 }
 
-/* Nav menu wrapper */
 .navbar {
     background-color: transparent; 
     box-shadow: none;
@@ -54,7 +53,6 @@ header {
 }
 
 
-/* Menu list */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -63,7 +61,6 @@ header {
   padding: 0;
 }
 
-/* Menu items */
 .nav-item {
   color: #ccc;
   font-size: 20px;
@@ -73,13 +70,11 @@ header {
   cursor: pointer;
 }
 
-/* Hover effect */
 .nav-item:hover {
   background-color: #222;
   color: #fff;
 }
 
-/* Active state */
 .nav-item.active {
   background-color: #111; 
   border-radius: 12px;
@@ -95,7 +90,6 @@ header {
   gap: 15px;
 }
 
-/* Hamburger hidden by default */
 .hamburger {
   display: none;
   font-size: 26px;
@@ -105,7 +99,11 @@ header {
   cursor: pointer;
 }
 
-/* Responsive styles */
+.logo {
+  height: 40px;
+  width: auto;
+}
+
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
@@ -130,47 +128,46 @@ header {
   }
 }
 
-.hero-sub-container{
+.hero-sub-container {
   background: url('Sub Container.png') center/cover no-repeat;
-  padding: 9rem 4rem;
+  height: 750px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end; 
-  align-items: center;       
+  align-items: flex-end; 
+  justify-content: center;
+  padding: 4rem 2rem;
   text-align: center;
-  height: 750px;       
-  margin-top: 3rem;  
 }
 
-.logo {
-  height: 40px;
-  width: auto;
+.hero-content {
+  max-width: 900px;
+  color: white;
 }
 
 .hero-sub-container h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero-sub-container p {
-  font-size: 0.8rem;
-  margin: 0 auto 1.5rem auto; 
-  max-width: 600px; 
-  padding: 0 1rem; 
-  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 5rem;
   color: rgb(201, 196, 196);
-  font-weight: 300; 
+  font-weight: 300;
 }
 
 .hero-sub-container button {
   background-color: #e50914;
-  color: #fff;
+  color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
   font-size: 1rem;
-  border-radius: 0.5rem;
   cursor: pointer;
 }
+
 
 .hero h1 {
   font-size: 2.5rem;
@@ -381,7 +378,7 @@ button.choose {
 .devices-section {
   max-width: 1440px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 60px;
   margin-bottom: 20px;
   padding: 60px 40px;
 }
