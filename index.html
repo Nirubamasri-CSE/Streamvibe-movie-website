@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StreamVibe Clone</title>
   <link href="styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
   <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -35,14 +37,23 @@
     </div>
   </nav>
 </section>
-
-
-    <div class="icon-container">
-      <img src="search-icon.svg" alt="Search" class="nav-icon" />
-      <img src="Vector (1).png" alt="Notifications" class="nav-icon" />
-      <button class="hamburger" id="hamburger">&#9776;</button>
-    </div>
-  </header>
+  <div class="icon-container">
+    <img src="search-icon.svg" alt="Search" class="nav-icon" id="searchIcon" />
+    <input type="text" id="searchInput" placeholder="Search..." />
+    <img src="bell-icon.png" alt="Notifications" class="nav-icon" />
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+<script>
+  const searchIcon = document.getElementById('searchIcon');
+  const searchInput = document.getElementById('searchInput');
+  searchIcon.addEventListener('click', () => {
+    searchInput.style.display = searchInput.style.display === 'inline-block' ? 'none' : 'inline-block';
+    if (searchInput.style.display === 'inline-block') {
+      searchInput.focus();
+    }
+  });
+</script>
+</header>
 
 <section class="hero-sub-container">
   <div class="hero-sub-content">
@@ -53,9 +64,7 @@
     <button>Start Watching Now</button>
   </div>
 </section>
-                                                                                                                                                                                             
-
-
+                                                                                                                                                                                            
 <section class="contain">
 <div class="header-section">
   <div class="text-content">
@@ -82,7 +91,6 @@
     </button>
   </div>
 </div>
-
 
 <section class="conatin">
 <div class="carousel-wrapper">
