@@ -155,7 +155,7 @@ header {
   display: flex;
   align-items: flex-end; 
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem;
   text-align: center;
 }
 
@@ -213,10 +213,11 @@ header {
 .header-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   padding: 20px;
   background-color: #121212;
   color: white;
+  margin-top: 150px;
 }
 
 .text-content h2 {
@@ -237,6 +238,7 @@ header {
   background-color: #1a1a1a;
   padding: 8px 12px;
   border-radius: 12px;
+  margin-bottom: 50px;
 }
 
 .nav-button {
@@ -269,6 +271,69 @@ header {
   background-color: red;
 }
 
+.carousel-wrapper {
+  position: relative;
+  margin-top: 40px;
+}
+
+.category-card {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.category-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+}
+
+.category-footer .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.category-card:hover .arrow {
+  transform: translateX(4px);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 35%;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+}
+
+.custom-nav {
+  opacity: 0;
+}
+
+.carousel-wrapper:hover .custom-nav {
+  opacity: 1;
+}
 
 .category-cards-container {
   display: flex;
@@ -343,14 +408,15 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: left;
 }
 
-.pricing-card p{
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 12px;
+.pricing-card p {
   color: #aaa;
-} 
+  text-align: left !important;
+  width: 100%;
+}
+
 
 .price {
   font-size: 28px;
@@ -362,10 +428,12 @@ header {
   color: #aaa;
 }
 
-.buttons {
+.pricing-card .buttons {
   display: flex;
-  gap: 10px;
+  justify-content: center;  
+  gap: 15px;                
 }
+
 
 button.trial {
   background: #000; 
