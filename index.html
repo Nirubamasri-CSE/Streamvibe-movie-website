@@ -57,9 +57,7 @@
 <section class="hero-sub-container">
   <div class="hero-sub-content">
     <h1>The Best Streaming Experience</h1>
-    <p>
-      StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, <br> you can enjoy a wide variety of content, including the latest blockbusters, classic movies, and popular TV shows.
-    </p>
+    <p>StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, and popular TV shows.</p>
     <button>Start Watching Now</button>
   </div>
 </section>
@@ -273,11 +271,19 @@
 </section>
 
 <section class="contain">
-<section class="pricing-section">
-  <div class="pricing-header">
+<div class="pricing-header">
+  <div class="text-content">
     <h2>Choose the plan that’s right for you</h2>
-    <p>Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!</p>
+    <p>
+      Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!
+    </p>
   </div>
+  <div class="toggle-container">
+    <button class="toggle-button active">Monthly</button>
+    <button class="toggle-button">Yearly</button>
+  </div>
+</div>
+
 
   <div class="pricing-cards">
     <div class="pricing-card">
@@ -311,7 +317,7 @@
     </div>
   </div>
 </section>
-
+</div>
 </section>
 
 <section class="contain">
@@ -391,11 +397,11 @@
   </footer>
 
 <script>
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu").querySelector(".menu");
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
 
-  hamburger.addEventListener("click", () => {
-    menu.classList.toggle("show");
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
   });
 </script>
 
