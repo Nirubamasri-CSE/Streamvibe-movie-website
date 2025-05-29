@@ -49,14 +49,20 @@
 </script>
 </header>
 
+<!-- Make sure Font Awesome is loaded in <head> -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 <div class="hero-content">
   <img src="Sub Container.png" alt="Hero Image" />
   
   <section class="hero-sub-container">
     <div class="hero-sub-content">
       <h1>The Best Streaming Experience</h1>
-      <p>StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, and popular TV shows.</p>
-      <button>Start Watching Now</button> 
+      <p>
+        StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. 
+        With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, and popular TV shows.
+      </p>
+      <button><i class="fas fa-play"></i> Start Watching Now</button> 
     </div>
   </section>
 </div>
@@ -137,11 +143,11 @@
 
 <script>
   const swiper = new Swiper('.categories-carousel', {
-    slidesPerView: 3,
+    slidesPerView: 300,
     spaceBetween: 20,
     loop: true,
     autoplay: {
-      delay: 1000,
+      delay: 450,
       disableOnInteraction: false,
     },
     navigation: {
@@ -182,6 +188,19 @@
   carousel.addEventListener('mouseleave', () => {
     swiper.autoplay.start();
   });
+
+  const navButtons = document.querySelectorAll('.nav-container .nav-button');
+
+navButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    if (index === 0) {
+      swiper.slidePrev();  
+    } else {
+      swiper.slideNext();  
+    }
+  });
+});
+
 </script>
 
 </section>
@@ -384,64 +403,59 @@
 </section>
 
 <section class="contain">
-<section class="footer-top">
-  <div class="footer-columns">
-    <div class="footer-column">
-      <h4>Home</h4>
-      <ul>
-        <li>Categories</li>
-        <li>Devices</li>
-        <li>Pricing</li>
-        <li>FAQ</li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Movies</h4>
-      <ul>
-        <li>Gernes</li>
-        <li>Trending</li>
-        <li>New Release</li>
-        <li>Popular</li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Shows</h4>
-      <ul>
-        <li>Gernes</li>
-        <li>Trending</li>
-        <li>New Release</li>
-        <li>Popular</li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Support</h4>
-      <ul>
-        <li>Contact Us</li>
-      </ul>
-    </div>
-
-    <div class="footer-column">
-      <h4>Subscription</h4>
-      <ul>
-        <li>Plans</li>
-        <li>Features</li>
-      </ul>
-    </div>
-
-    <div class="footer-column social">
-  <h4>Connect With Us</h4>
-  <div class="social-icons">
-    <button><i class="fas fa-facebook"></i></button>
-    <button><i class="fas fa-times"></i></button>
-    <button><i class="fas fa-times"></i></button>
+<footer class="footer">
+  <div class="footer-column">
+    <h4>Home</h4>
+    <ul>
+      <li>Categories</li>
+      <li>Devices</li>
+      <li>Pricing</li>
+      <li>FAQ</li>
+    </ul>
   </div>
+  <div class="footer-column">
+    <h4>Movies</h4>
+    <ul>
+      <li>Genres</li>
+      <li>Trending</li>
+      <li>New Release</li>
+      <li>Popular</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h4>Shows</h4>
+    <ul>
+      <li>Genres</li>
+      <li>Trending</li>
+      <li>New Release</li>
+      <li>Popular</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h4>Support</h4>
+    <ul>
+      <li>Contact Us</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h4>Subscription</h4>
+    <ul>
+      <li>Plans</li>
+      <li>Features</li>
+    </ul>
+  </div>
+  <div class="footer-column social">
+    <h4>Connect With Us</h4>
+    <div class="social-icons">
+  <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="icon"><span class="icon-text">X</span></a>
+  <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
 </div>
-
   </div>
-</section>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </section>
 
   <footer class="footer">
