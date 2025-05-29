@@ -94,6 +94,32 @@
   </div>
 </div>
 
+<script>
+  const dots = document.querySelectorAll('.progress-dots .dot');
+  const buttons = document.querySelectorAll('.nav-button');
+  let currentIndex = 0;
+
+  function updateDot(index) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  buttons[1].addEventListener('click', () => {
+    if (currentIndex < dots.length - 1) {
+      currentIndex++;
+      updateDot(currentIndex);
+    }
+  });
+
+  buttons[0].addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateDot(currentIndex);
+    }
+  });
+</script>
+
+
 <section class="conatin">
 <div class="carousel-wrapper">
   <div class="swiper categories-carousel">
