@@ -49,13 +49,18 @@
 </script>
 </header>
 
-<section class="hero-sub-container">
-  <div class="hero-sub-content">
-    <h1>The Best Streaming Experience</h1>
-    <p>StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, and popular TV shows.</p>
-    <button>Start Watching Now</button>
-  </div>
-</section>
+<div class="hero-content">
+  <img src="Sub Container.png" alt="Hero Image" />
+  
+  <section class="hero-sub-container">
+    <div class="hero-sub-content">
+      <h1>The Best Streaming Experience</h1>
+      <p>StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, and popular TV shows.</p>
+      <button>Start Watching Now</button> 
+    </div>
+  </section>
+</div>
+
                                                                                                                                                                                             
 <section class="contain">
 <div class="header-section">
@@ -139,6 +144,16 @@
       delay: 1000,
       disableOnInteraction: false,
     },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      bulletClass: 'dot',
+      bulletActiveClass: 'active'
+    },
     breakpoints: {
       768: {
         slidesPerView: 3,
@@ -168,6 +183,7 @@
     swiper.autoplay.start();
   });
 </script>
+
 </section>
 </section>
 
@@ -418,7 +434,7 @@
     <div class="footer-column social">
   <h4>Connect With Us</h4>
   <div class="social-icons">
-    <button><i class="fas fa-times"></i></button>
+    <button><i class="fas fa-facebook"></i></button>
     <button><i class="fas fa-times"></i></button>
     <button><i class="fas fa-times"></i></button>
   </div>

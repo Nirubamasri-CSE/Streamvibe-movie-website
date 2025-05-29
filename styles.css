@@ -150,19 +150,25 @@ header {
   }
 }
 
-.hero-sub-container {
-  background: url('Sub Container.png') center/cover no-repeat;
-  height: 750px;
-  display: flex;
-  align-items: flex-end; 
-  justify-content: center;
-  padding: 0rem 2rem;
+.hero-content {
+  max-width: 1800px;
+  margin: 0 auto;
+  color: white;
   text-align: center;
 }
 
-.hero-content {
-  max-width: 900px;
-  color: white;
+.hero-content img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin-bottom: 0; 
+}
+
+.hero-sub-container {
+  background-color: transparent;
+  border-radius: 0 0 10px 10px; 
+  padding: 2rem 1.5rem;
+  margin-top: 0;
 }
 
 .hero-sub-container h1 {
@@ -174,7 +180,6 @@ header {
 .hero-sub-container p {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 5rem;
   color: rgb(201, 196, 196);
   font-weight: 300;
   margin-bottom: 3rem;
@@ -190,6 +195,7 @@ header {
   font-size: 1rem;
   cursor: pointer;
 }
+
 
 
 .hero h1 {
@@ -370,7 +376,7 @@ header {
 }
 
 .pricing-section {
-  max-width: 1440px; /* Match your layout width */
+  max-width: 1440px; 
   margin: 0 auto;
   padding: 0 1rem;
 }
