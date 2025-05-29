@@ -7,14 +7,9 @@
   <title>StreamVibe Clone</title>
   <link href="styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <body>
   <header class="navbar">
@@ -91,7 +86,6 @@
 
 <section class="conatin">
 <div class="carousel-wrapper">
-
   <div class="swiper categories-carousel">
     <div class="swiper-wrapper">
       <div class="swiper-slide category-card">
@@ -131,8 +125,49 @@
       </div>
     </div>
   </div>
-</section>
 </div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.categories-carousel', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      480: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1,
+      }
+    },
+    on: {
+      touchStart: function () {
+        this.autoplay.stop();
+      },
+      touchEnd: function () {
+        this.autoplay.start();
+      }
+    }
+  });
+
+  const carousel = document.querySelector('.categories-carousel');
+  carousel.addEventListener('mouseenter', () => {
+    swiper.autoplay.stop();
+  });
+  carousel.addEventListener('mouseleave', () => {
+    swiper.autoplay.start();
+  });
+</script>
 </section>
 </section>
 
@@ -412,53 +447,21 @@
     const toggle = item.querySelector('.faq-toggle');
     const answer = item.querySelector('.faq-content p');
 
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-
+    item.addEventListener('click', () => {
       const isExpanded = item.classList.contains('expanded');
 
       item.classList.toggle('expanded');
 
-      toggle.textContent = isExpanded ? '+' : '−';
+      if (toggle) {
+        toggle.textContent = isExpanded ? '+' : '−';
+      }
+
       if (answer) {
         answer.style.display = isExpanded ? 'none' : 'block';
       }
     });
   });
 </script>
-
-<script>
-  const swiper = new Swiper('.categories-carousel', {
-    slidesPerView: 300,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false, 
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 3
-      },
-      480: {
-        slidesPerView: 2
-      },
-      0: {
-        slidesPerView: 1
-      }
-    }
-  });
-</script>
-
-
 
 </body>
 
