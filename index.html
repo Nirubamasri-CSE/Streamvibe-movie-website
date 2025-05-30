@@ -164,65 +164,52 @@
   </div>
 </div>
 
-<!-- Swiper JS -->
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
   const swiper = new Swiper('.categories-carousel', {
-    slidesPerView: 300,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 450,
-      disableOnInteraction: false,
+  slidesPerView: 300,
+  spaceBetween: 20,
+  loop: false,
+  autoplay: false, 
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    bulletClass: 'dot',
+    bulletActiveClass: 'active'
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    480: {
+      slidesPerView: 2,
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      bulletClass: 'dot',
-      bulletActiveClass: 'active'
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-      },
-      480: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    on: {
-      touchStart: function () {
-        this.autoplay.stop();
-      },
-      touchEnd: function () {
-        this.autoplay.start();
-      }
+    0: {
+      slidesPerView: 1,
     }
-  });
+  },
+  on: {
+    touchStart: function () {
+    },
+    touchEnd: function () {
+    }
+  }
+});
 
-  const carousel = document.querySelector('.categories-carousel');
-  carousel.addEventListener('mouseenter', () => {
-    swiper.autoplay.stop();
-  });
-  carousel.addEventListener('mouseleave', () => {
-    swiper.autoplay.start();
-  });
-
-  const navButtons = document.querySelectorAll('.nav-container .nav-button');
+const navButtons = document.querySelectorAll('.nav-container .nav-button');
 
 navButtons.forEach((btn, index) => {
   btn.addEventListener('click', () => {
     if (index === 0) {
-      swiper.slidePrev();  
+      swiper.slidePrev();
     } else {
-      swiper.slideNext();  
+      swiper.slideNext();
     }
   });
 });
